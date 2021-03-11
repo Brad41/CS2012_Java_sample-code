@@ -14,24 +14,11 @@ public class RandomAddressGenerator {
 		String pathString = "";
 		String tempText = "";
 
-		ArrayList<String> emailExt = new ArrayList<>();
-		emailExt.add("gmail.com");
-		emailExt.add("yahoo.com");
-		emailExt.add("aol.com");
-		emailExt.add("hotmail.com");
-		emailExt.add("att.net");
-		emailExt.add("spectrum.net");
-		emailExt.add("calstatela.edu");
-
 		ArrayList<String> firstnames = new ArrayList<>();
 		ArrayList<String> lastnames = new ArrayList<>();
 		ArrayList<String> areacodes = new ArrayList<>();
 
 		Random rndnum = new Random();
-		int arrayIndex = rndnum.nextInt(emailExt.size());
-
-		System.out.println(emailExt.get(arrayIndex));
-		System.out.println(emailExt.get((int) (new Random()).nextInt(emailExt.size())));
 
 		// ---reading form files ---
 
@@ -86,7 +73,7 @@ public class RandomAddressGenerator {
 				String firstname = firstnames.get((int) (new Random()).nextInt(firstnames.size()));
 				String lastname = lastnames.get((int) (new Random()).nextInt(lastnames.size()));
 				String phonenumber = makePhoneNum(areacodes.get((int) (new Random()).nextInt(areacodes.size())));
-				String email = emailExt.get((int) (new Random()).nextInt(emailExt.size()));
+				String email = genEmail(firstname, lastname);
 
 				prtout.println(firstname + ";" + lastname + ";" + phonenumber + ";" + email + ";");
 
@@ -111,4 +98,18 @@ public class RandomAddressGenerator {
 		return bob.toString();
 	}
 
+	public static String genEmail(String fn, String ln) {
+		ArrayList<String> emailExt = new ArrayList<>();
+		emailExt.add("gmail.com");
+		emailExt.add("yahoo.com");
+		emailExt.add("aol.com");
+		emailExt.add("hotmail.com");
+		emailExt.add("att.net");
+		emailExt.add("spectrum.net");
+		emailExt.add("calstatela.edu");
+		StringBuilder bob = new StringBuilder();
+		bob.append(fn.toLowerCase().charAt(0) + ln.toLowerCase().substring(0, Math.min(5,  ln.length())) + ".");	
+		bob.append(emailExt.get((int) (new Random()).nextInt(emailExt.size())));
+		return bob.toString();
+	}
 }
