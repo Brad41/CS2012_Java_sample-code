@@ -8,7 +8,7 @@ public class FileIO_scratch1 {
 
 	public static void main(String[] args) {
 		// this will expect the file to exist in the default location
-		String pathString = "testFile01.txt";
+		String pathString = "src/packageDemo/textFiles/testFile01.txt";
 
 		try {
 			// create a File instance object that connects to the named file and path
@@ -26,7 +26,7 @@ public class FileIO_scratch1 {
 			// clean up the resources used
 			prtout.close();
 
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// if something breaks catch and print out what went wrong
 			System.err.println(e);
 		}
