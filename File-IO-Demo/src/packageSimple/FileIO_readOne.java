@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class FileIO_readOne {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 
 		// this will expect the file to exist in the default location
 		String pathString = "testFile01.txt";
