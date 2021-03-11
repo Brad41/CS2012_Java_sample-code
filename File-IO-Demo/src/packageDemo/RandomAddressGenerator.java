@@ -85,13 +85,11 @@ public class RandomAddressGenerator {
 			for (int i = 0; i < 10; i++) {
 				String firstname = firstnames.get((int) (new Random()).nextInt(firstnames.size()));
 				String lastname = lastnames.get((int) (new Random()).nextInt(lastnames.size()));
-				String areacode = areacodes.get((int) (new Random()).nextInt(areacodes.size()));
+				String phonenumber = makePhoneNum(areacodes.get((int) (new Random()).nextInt(areacodes.size())));
 				String email = emailExt.get((int) (new Random()).nextInt(emailExt.size()));
 
-				prtout.println(firstname);
-				prtout.println(lastname);
-				prtout.println(areacode);
-				prtout.println(email);
+				prtout.println(firstname + ";" + lastname + ";" + phonenumber + ";" + email + ";");
+
 			}
 
 			prtout.flush();
@@ -102,6 +100,15 @@ public class RandomAddressGenerator {
 			System.err.println(e);
 		}
 
+	}
+
+	public static String makePhoneNum(String ac) {
+		StringBuilder bob = new StringBuilder();
+		bob.append(ac);
+		for (int i = 0; i < 7; i++) {
+			bob.append(String.valueOf((new Random().nextInt(9))));
+		}
+		return bob.toString();
 	}
 
 }
