@@ -38,13 +38,13 @@ public class RandomAddressGenerator {
 		// this will expect the file to exist in the default location
 		String firstNamePath = "firstNames.txt";
 		String lastNamePath = "lastNames.txt";
-		String areaCodesPath = "areaCodes.txt";
+		String areaCodesPath = "areaCode.txt";
 
 		try {
 			File firstNameFile = new File(firstNamePath);
 			File lastNameFile = new File(lastNamePath);
 			File areacodesFile = new File(areaCodesPath);
-			
+
 			Scanner fnScan = new Scanner(firstNameFile);
 			Scanner lnScan = new Scanner(lastNameFile);
 			Scanner acScan = new Scanner(areacodesFile);
@@ -53,18 +53,17 @@ public class RandomAddressGenerator {
 				tempText = fnScan.nextLine();
 				firstnames.add(tempText);
 			}
-			
+
 			while (lnScan.hasNext()) {
 				tempText = lnScan.nextLine();
 				lastnames.add(tempText);
 			}
-			
+
 			while (acScan.hasNext()) {
 				tempText = acScan.nextLine();
 				areacodes.add(tempText);
 			}
 
-			
 			System.out.println(firstnames.get((int) (new Random()).nextInt(firstnames.size())));
 
 			fnScan.close();
@@ -84,11 +83,15 @@ public class RandomAddressGenerator {
 			PrintWriter prtout = new PrintWriter(outputFile);
 
 			for (int i = 0; i < 10; i++) {
-				
-				prtout.println(firstnames.get((int) (new Random()).nextInt(firstnames.size())));
-				prtout.println(lastnames.get((int) (new Random()).nextInt(lastnames.size())));
-				prtout.println(areacodes.get((int) (new Random()).nextInt(areacodes.size())));
-				prtout.println(emailExt.get((int) (new Random()).nextInt(emailExt.size())));
+				String firstname = firstnames.get((int) (new Random()).nextInt(firstnames.size()));
+				String lastname = lastnames.get((int) (new Random()).nextInt(lastnames.size()));
+				String areacode = areacodes.get((int) (new Random()).nextInt(areacodes.size()));
+				String email = emailExt.get((int) (new Random()).nextInt(emailExt.size()));
+
+				prtout.println(firstname);
+				prtout.println(lastname);
+				prtout.println(areacode);
+				prtout.println(email);
 			}
 
 			prtout.flush();
