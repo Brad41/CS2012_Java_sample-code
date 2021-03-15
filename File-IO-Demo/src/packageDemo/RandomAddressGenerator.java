@@ -11,7 +11,6 @@ public class RandomAddressGenerator {
 
 	public static void main(String[] args) {
 
-		String pathString = "";
 		String tempText = "";
 
 		ArrayList<String> firstnames = new ArrayList<>();
@@ -63,7 +62,7 @@ public class RandomAddressGenerator {
 		}
 
 		// --- write to file ---
-		pathString = "phoneBook.txt";
+		String pathString = "phoneBook.txt";
 
 		try {
 			File outputFile = new File(pathString);
@@ -89,6 +88,8 @@ public class RandomAddressGenerator {
 
 	}
 
+	// ------- methods ----------
+	
 	public static String makePhoneNum(String ac) {
 		StringBuilder bob = new StringBuilder();
 		bob.append(ac);
@@ -108,7 +109,7 @@ public class RandomAddressGenerator {
 		emailExt.add("spectrum.net");
 		emailExt.add("calstatela.edu");
 		StringBuilder bob = new StringBuilder();
-		bob.append(fn.toLowerCase().charAt(0) + ln.toLowerCase().substring(0, Math.min(5,  ln.length())) + ".");	
+		bob.append(fn.toLowerCase().charAt(0) + ln.toLowerCase().substring(0, Math.min(5,  ln.length())) + "@");	
 		bob.append(emailExt.get((int) (new Random()).nextInt(emailExt.size())));
 		return bob.toString();
 	}
