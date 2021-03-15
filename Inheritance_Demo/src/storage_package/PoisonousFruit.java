@@ -1,4 +1,4 @@
-package abstract_demo;
+package storage_package;
 
 public class PoisonousFruit {
 

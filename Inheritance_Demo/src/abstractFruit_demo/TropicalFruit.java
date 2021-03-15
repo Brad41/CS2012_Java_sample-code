@@ -1,4 +1,4 @@
-package abstract_demo;
+package abstractFruit_demo;
 
 public abstract class TropicalFruit {
 
