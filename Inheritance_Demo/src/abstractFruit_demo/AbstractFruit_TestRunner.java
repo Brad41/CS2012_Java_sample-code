@@ -9,7 +9,10 @@ public class AbstractFruit_TestRunner {
 		o.toString();
 		
 		Fruit f = new Fruit();
-		System.out.println(f.name);
+		//System.out.println(f.name);
+		
+		Apple a = new Apple();
+		System.out.println(a.getName());
 		
 	}
 

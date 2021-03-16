@@ -1,9 +1,11 @@
 package abstractFruit_demo;
 
-public class Fruit {
-	private String name;
+public class Fruit extends Object{
+	protected String name;
 
-	
+	public String getName() {
+		return name;
+	}
 	
 }
 

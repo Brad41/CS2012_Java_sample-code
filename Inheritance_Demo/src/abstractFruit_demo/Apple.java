@@ -1,8 +1,13 @@
 package abstractFruit_demo;
 
-public class Apple{
+public class Apple extends Fruit{
 	//TemperateFruit
 	
+	
+	public Apple() {
+		super.name = "Apple";
+	}
+
 	
 }
 
