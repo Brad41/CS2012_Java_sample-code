@@ -1,12 +1,38 @@
 package abstractFruit_demo;
 
-public abstract class Fuji extends Apple {
+public class Fuji {
 	// Apple
 
-	private final String name = "Figi";
-	
-	abstract int getZenValue();
 
-	public abstract String howToCook();
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//private final String name = "Figi";
+//
+//abstract int getZenValue();
+//
+//public abstract String howToCook();
