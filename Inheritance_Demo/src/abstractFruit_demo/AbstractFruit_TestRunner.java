@@ -17,9 +17,12 @@ public class AbstractFruit_TestRunner {
 		
 		ArrayList<Fruit> arrf = new ArrayList<>();
 		
-		Apple a = new Apple();
+		Apple a = new RedFuji();
 		System.out.println(a.getName());
 		System.out.println(a.doConsume());
+		
+		
+		Number n = new Integer(42);
 		
 	}
 

@@ -1,6 +1,6 @@
 package abstractFruit_demo;
 
-public abstract class Fruit extends Object{
+public abstract class Fruit {
 	protected String name;
 
 
@@ -10,6 +10,7 @@ public abstract class Fruit extends Object{
 	
 	
 	public abstract String doConsume();
+	
 	
 	public static void checkMood() {
 		System.out.println("fruit is happy");

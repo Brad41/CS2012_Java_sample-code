@@ -1,7 +1,10 @@
 package abstractFruit_demo;
 
-public class RedFuji{
+public class RedFuji extends Fuji{
 	
+	public void harvest() {
+		System.out.println("vacume cleaner");
+	};
 
 }
 
