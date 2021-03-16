@@ -1,5 +1,7 @@
 package abstractFruit_demo;
 
+import java.util.ArrayList;
+
 public class AbstractFruit_TestRunner {
 
 	public static void main(String[] args) {
@@ -8,11 +10,16 @@ public class AbstractFruit_TestRunner {
 		Object o = new Object();
 		o.toString();
 		
-		Fruit f = new Fruit();
+		Fruit fa;
 		//System.out.println(f.name);
+		
+		Fruit.checkMood();
+		
+		ArrayList<Fruit> arrf = new ArrayList<>();
 		
 		Apple a = new Apple();
 		System.out.println(a.getName());
+		System.out.println(a.doConsume());
 		
 	}
 

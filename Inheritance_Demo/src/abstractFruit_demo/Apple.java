@@ -9,6 +9,12 @@ public class Apple extends Fruit{
 	}
 
 	
+	public String doConsume() {
+		return "yummy apple pie";
+	}
+	
+	
+	
 }
 
 

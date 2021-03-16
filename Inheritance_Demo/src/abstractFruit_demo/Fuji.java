@@ -1,31 +1,17 @@
 package abstractFruit_demo;
 
-public class Fuji {
+public abstract class Fuji extends Apple {
 	// Apple
 
 
+	public abstract void harvest();
+	
+	@Override
+	public String doConsume() {
+		return "yummy Fuji corp apple pie(tm)";
+	}
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

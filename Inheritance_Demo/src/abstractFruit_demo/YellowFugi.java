@@ -2,7 +2,9 @@ package abstractFruit_demo;
 
 public class YellowFugi extends Fuji{
 
-
+	public void harvest() {
+		System.out.println("use ladder");
+	};
 		
 }
 
