@@ -5,7 +5,12 @@ public class AbstractFruit_TestRunner {
 	public static void main(String[] args) {
 		System.out.println("AbstractFruit_TestRunner");
 		
-
+		Object o = new Object();
+		o.toString();
+		
+		Fruit f = new Fruit();
+		System.out.println(f.name);
+		
 	}
 
 }

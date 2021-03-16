@@ -1,8 +1,10 @@
 package abstractFruit_demo;
 
-public abstract class Fruit {
+public class Fruit {
+	private String name;
 
-
+	
+	
 }
 
 
