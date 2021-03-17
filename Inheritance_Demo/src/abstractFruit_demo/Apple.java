@@ -8,7 +8,7 @@ public class Apple extends Fruit{
 		super.name = "Apple";
 	}
 
-	
+	@Override 
 	public String doConsume() {
 		return "yummy apple pie";
 	}

@@ -9,7 +9,7 @@ public abstract class Fruit {
 	}
 	
 	
-	public abstract String doConsume();
+	protected abstract String doConsume();
 	
 	
 	public static void checkMood() {
