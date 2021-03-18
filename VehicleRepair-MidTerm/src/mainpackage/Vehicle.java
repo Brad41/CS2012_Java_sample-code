@@ -3,7 +3,15 @@ package mainpackage;
 public abstract class Vehicle {
 	
 	protected int IDnumber;
+	
+	public int getID() {
+		return IDnumber;
+	}
 
+	protected abstract void doRepair(int selectRepair);
+		
+
+	
 }
 
 

@@ -7,7 +7,13 @@ public class RunVehicleRepairShop {
 		
 		System.out.println("Enter Vehicles repair requests: ");
 		
+		
+		
+		Automobile a = new Automobile();
+		System.out.println(a.getRepairChoices());
+		a.doRepair(1);
 
+		
 	}
 
 }

@@ -1,8 +1,21 @@
 package mainpackage;
 
-public class Automobile  {
+public class Automobile extends LandVehicle {
 
 	public Automobile() {
+	}
+
+	public String getRepairChoices() {
+		return "1: replace tires\n2: replace carburator\n3: paint job";
+	}
+	
+	
+	@Override
+	protected void doRepair(int chooseRepair) {
+		if(chooseRepair == 1) {
+			//replace tires
+			System.out.println("replaceing tires");
+		}	
 	}
 	
 }
