@@ -7,14 +7,38 @@ public class RunVehicleRepairShop {
 		
 		System.out.println("Enter Vehicles repair requests: ");
 		
-		Automobile camero = new Automobile(4);
-		
-		double timeToRepair = camero.doRepair(1);
-		System.out.println(timeToRepair + " hours");
-		
-		//of day pricess
-		RepairStockUsed.createRestockOrderFile();
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//Automobile camero = new Automobile(4);
+//
+//double timeToRepair = camero.doRepair(1);
+//System.out.println(timeToRepair + " hours");
+//
+////of day pricess
+//RepairStockUsed.createRestockOrderFile();

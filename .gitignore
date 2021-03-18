@@ -1,0 +1,36 @@
+#ignore everything
+/*
+
+!.gitignore
+!README.MD
+
+#File-IO
+!/File-IO-Demo
+/File-IO-Demo/*
+!/File-IO-Demo/src/
+/File-IO-Demo/src/*
+!/File-IO-Demo/src/packageSimple/
+!/File-IO-Demo/src/packageDemo/
+!/File-IO-Demo/src/packageMixed
+
+#Inheritance
+!/Inheritance_Demo
+/Inheritance_Demo/*
+!/Inheritance_Demo/src/
+/Inheritance_Demo/src/*
+!/Inheritance_Demo/src/abstractFruit_demo/
+
+
+!/VehicleRepair-MidTerm
+/VehicleRepair-MidTerm/*
+!/VehicleRepair-MidTerm/src/
+#/VehicleRepair-MidTerm/*
+!/VehicleRepair-MidTerm/src/mainpackage/
+
+
+package-info.java
+module-info.java
+
+# cupdate() {  git add . ; git commit -m "quick code update" ; git push origin main ; }
+
+#  git rm -r --cached . 
