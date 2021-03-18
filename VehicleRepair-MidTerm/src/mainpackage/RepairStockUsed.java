@@ -18,7 +18,7 @@ public class RepairStockUsed {
 	public static void createRestockOrderFile() {
 		// TODO
 		// save the itemsUsed to a text file
-		// clear the itemsUsed list
+		clearList();
 	}
-
+	
 }
