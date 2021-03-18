@@ -8,7 +8,7 @@ public abstract class Vehicle {
 		return IDnumber;
 	}
 
-	protected abstract void doRepair(int selectRepair);
+	protected abstract double doRepair(int selectRepair);
 		
 
 	

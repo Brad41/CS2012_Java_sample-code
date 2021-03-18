@@ -11,7 +11,8 @@ public class RunVehicleRepairShop {
 		
 		Automobile a = new Automobile();
 		System.out.println(a.getRepairChoices());
-		a.doRepair(1);
+		
+		System.out.println("repair time = " + a.doRepair(1));
 
 		
 	}
