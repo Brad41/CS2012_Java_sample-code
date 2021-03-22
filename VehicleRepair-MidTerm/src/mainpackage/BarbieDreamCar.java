@@ -15,10 +15,10 @@ public class BarbieDreamCar extends LandVehicle {
 		double repairTime = 0;
 		if(selectRepair == 1) {
 			repairTime = getRepairTime(1);
-			RepairStockUsed.getItem("4 high powered springs");
-			RepairStockUsed.getItem("replace upholster pads");
-			RepairStockUsed.getItem("lubricate bearings");
-			RepairStockUsed.getItem("4 ml bering oil");
+			PartsAndSupplies.getItem("4 high powered springs");
+			PartsAndSupplies.getItem("replace upholster pads");
+			PartsAndSupplies.getItem("lubricate bearings");
+			PartsAndSupplies.getItem("4 ml bering oil");
 			System.out.println("repaired ejector seat");  //debug
 		}
 		// TODO Auto-generated method stub

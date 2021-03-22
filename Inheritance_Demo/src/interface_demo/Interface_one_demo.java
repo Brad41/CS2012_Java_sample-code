@@ -4,7 +4,7 @@ public class Interface_one_demo {
 
 	public static void main(String[] args) {
 
-		Fruit f = new Fruit();
+		Banana f = new Banana();
 		System.out.println(f.howToEat());
 		
 		

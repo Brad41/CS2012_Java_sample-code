@@ -2,7 +2,7 @@ package mainpackage;
 
 import java.util.ArrayList;
 
-public class RepairStockUsed {
+public class PartsAndSupplies {
 
 	public static ArrayList<String> itemsUsed = new ArrayList<>();
 

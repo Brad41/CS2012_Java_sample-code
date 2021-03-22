@@ -22,9 +22,9 @@ public class Automobile extends LandVehicle {
 		if (chooseRepair == 1) {
 			// replace tires
 			repairTime = getRepairTime(1);
-			RepairStockUsed.getItem("4 tires");
-			RepairStockUsed.getItem("20 lugnuts");
-			RepairStockUsed.getItem("24 liters compressed air");
+			PartsAndSupplies.getItem("4 tires");
+			PartsAndSupplies.getItem("20 lugnuts");
+			PartsAndSupplies.getItem("24 liters compressed air");
 			System.out.println("replaceing tires");
 		}
 		return repairTime;
