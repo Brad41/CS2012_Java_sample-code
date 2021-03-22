@@ -20,9 +20,11 @@ public class AbstractFruit_TestRunner {
 		Apple a = new RedFuji();
 		System.out.println(a.getName());
 		System.out.println(a.doConsume());
+
 		
-		
-		Number n = new Integer(42);
+		// Number n = new Number(); // can not, because Number class is abstract
+		Number n = Integer.valueOf(42);
+		System.out.println(n.getClass());
 		
 	}
 

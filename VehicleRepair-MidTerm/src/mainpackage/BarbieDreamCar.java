@@ -1,6 +1,6 @@
 package mainpackage;
 
-public class Motorcyle extends LandVehicle {
+public class BarbieDreamCar extends LandVehicle {
 
 	
 	
