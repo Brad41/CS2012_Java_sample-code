@@ -14,6 +14,6 @@ public class Cake {
 	
 	@Override
 	public String toString() {
-		return "cake-orderNum: " + String.valueOf(thisOrderNum);
+		return "num:" + String.valueOf(thisOrderNum) + "-time:" + cookingTime;
 	}
 }

@@ -44,30 +44,34 @@ public class RunBakery {
 		// cook all cakes
 
 		int count = 0;
-		while (OvenA + OvenB > 0 && count < jobList.size() - 1) {
+		while (OvenA + OvenB > 0 && count < jobList.size()) {
 			if (OvenA >= OvenB) {
 				if ((OvenA - jobList.get(count).cookingTime) < 0) {
 					jobList.get(count).cookingTime = jobList.get(count).cookingTime - OvenA;
 					OvenA = 0;
 				} else {
-					jobList.get(count).cookingTime = 0;
 					OvenA = OvenA - jobList.get(count).cookingTime;
+					jobList.get(count).cookingTime = 0;
 				}
 			} else {
 				if ((OvenB - jobList.get(count).cookingTime) < 0) {
 					jobList.get(count).cookingTime = jobList.get(count).cookingTime - OvenB;
 					OvenB = 0;
 				} else {
-					jobList.get(count).cookingTime = 0;
 					OvenB = OvenB - jobList.get(count).cookingTime;
+					jobList.get(count).cookingTime = 0;
 				}
 			}
 			count++;
 		}
 		System.out.println("finished while loop");
 		
-
 		ArrayList<Cake> toDone = new ArrayList<>();
+		
+		System.out.print("jobList:  ");
+		System.out.println(jobList);
+		System.out.print("toDone:  ");
+		System.out.println(toDone);
 
 		//adds to toDone
 		for (int i = 0; i < jobList.size(); i++) {
@@ -75,17 +79,25 @@ public class RunBakery {
 				toDone.add(jobList.get(i));
 			}
 		}
+				
+//		// removes done items from jobList 
+//		for (int i = 0; i < toDone.size(); i++) {
+//			jobList.remove(toDone.get(i));
+//		}
 		
-		//adds to toDone
-		for (int i = 0; i < toDone.size(); i++) {
-			jobList.remove(toDone.get(i));
-			System.out.println(toDone.get(i));
-		}
+		// removes done items from jobList alternate version using forEach
+		toDone.forEach (item -> {
+			jobList.remove(item);
+		});
 		
+		System.out.print("jobList:  ");
+		System.out.println(jobList);
+		System.out.print("toDone:  ");
+		System.out.println(toDone);
+		
+		// prep for the next 'day'
 		OvenA = 20;
 		OvenB = 20;
  
-		
 	}
-
 }
