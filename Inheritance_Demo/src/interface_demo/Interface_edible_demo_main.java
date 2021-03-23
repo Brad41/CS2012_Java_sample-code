@@ -1,6 +1,6 @@
 package interface_demo;
 
-public class Interface_one_demo {
+public class Interface_edible_demo_main {
 
 	public static void main(String[] args) {
 
