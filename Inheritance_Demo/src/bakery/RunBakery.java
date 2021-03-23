@@ -5,9 +5,7 @@ import java.util.ArrayList;
 public class RunBakery {
 
 	public static void main(String[] args) {
-		Oven A = new Oven();
-		Oven B = new Oven();
-
+		
 		int OvenA = 20;
 		int OvenB = 20;
 
@@ -63,6 +61,7 @@ public class RunBakery {
 			}
 			count++;
 		}
+		
 		System.out.println("finished while loop");
 		
 		ArrayList<Cake> toDone = new ArrayList<>();

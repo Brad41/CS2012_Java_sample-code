@@ -3,6 +3,7 @@ package bakery;
 public class Cake {
 	
 	public int cookingTime = 0;
+	
 	public static int orderNum = 0;
 	public int thisOrderNum = 0;
 	
