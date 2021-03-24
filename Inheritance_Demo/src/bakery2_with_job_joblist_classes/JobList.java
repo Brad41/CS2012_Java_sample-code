@@ -1,5 +1,8 @@
 package bakery2_with_job_joblist_classes;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class JobList {
@@ -22,8 +25,23 @@ public class JobList {
 		jobs.remove(aJob);
 	}
 	
-	public void saveToFile() {
-		// save the joblist to a date named file at the end of the day
+	public void saveToFile(String fileName) {
+		String pathString = fileName + ".txt";
+
+		try {
+			File aFile = new File(pathString); 
+			PrintWriter prtout = new PrintWriter(aFile);
+			
+			for(int i = 0; i < jobs.size(); i++) {
+				prtout.println(jobs.get(i));
+			}
+
+			prtout.flush();
+			prtout.close();
+
+		} catch (IOException e) {
+			System.err.println(e);
+		}
 	}
 	
 	@Override

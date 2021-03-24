@@ -42,14 +42,14 @@ public class RunBakery {
 
 		System.out.println(jobList);
 
-		// cook all cakes
+		// cook all cakes - TODO need to move this code to it's own class
 
 		int count = 0;
 		// version using Oven class instead of variables
 			while (OvenA + OvenB > 0 && count < jobList.getSize()) {
 				if (OvenA >= OvenB) {
 					if ((OvenA - jobList.getJob(count).getCookingTime()) < 0) {
-						jobList.getJob(count).setCookingTime(jobList.getJob(count).getCookingTime() - OvenA);
+						jobList.getJob(count).setCookingTime( jobList.getJob(count).getCookingTime() - OvenA );
 						OvenA = 0;
 					} else {
 						OvenA = OvenA - jobList.getJob(count).getCookingTime();
@@ -73,7 +73,7 @@ public class RunBakery {
 		System.out.print("jobList:  ");
 		System.out.println(jobList);
 	
-		FinishedJobList finishedJobs = new FinishedJobList();
+		JobList finishedJobs = new JobList();
 		
 		//adds to finishedJobList
 		for (int i = 0; i < jobList.getSize(); i++) {
@@ -82,14 +82,14 @@ public class RunBakery {
 			}
 		}
 		// save a file with finishedJobs info in it
-		finishedJobs.saveToFile();
+		finishedJobs.saveToFile("finishedJobs");
 				
 		// removes done items from jobList 
 		for (int i = 0; i < finishedJobs.getSize(); i++) {
 			jobList.removeJob(finishedJobs.getJob(i));
 		}
 		// now save as a file to start next day joblist
-		jobList.saveToFile();
+		jobList.saveToFile("workOrder");
 		
 		
 		System.out.print("jobList:  ");
