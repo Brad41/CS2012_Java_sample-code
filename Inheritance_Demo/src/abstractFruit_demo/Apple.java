@@ -3,6 +3,7 @@ package abstractFruit_demo;
 public class Apple extends Fruit{
 	//TemperateFruit
 	
+	private String whoAmI = "apple";
 	
 	public Apple() {
 		super.name = "Apple";
@@ -12,8 +13,13 @@ public class Apple extends Fruit{
 	public String doConsume() {
 		return "yummy apple pie";
 	}
+
+	@Override
+	public String getWhoAmI() {
+		return whoAmI;
+	}
 	
-	
+
 	
 }
 

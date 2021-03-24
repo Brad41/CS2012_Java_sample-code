@@ -7,4 +7,10 @@ public class Banana extends Fruit {
 	public String doConsume() {
 		return "good banana smootie";
 	}
+
+	@Override
+	protected String getWhoAmI() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

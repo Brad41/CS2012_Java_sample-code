@@ -26,6 +26,8 @@ public class AbstractFruit_TestRunner {
 		Number n = Integer.valueOf(42);
 		System.out.println(n.getClass());
 		
+		System.out.println(a.getWhoAmI());
+		
 	}
 
 }

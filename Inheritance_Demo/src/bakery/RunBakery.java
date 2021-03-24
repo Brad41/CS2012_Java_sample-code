@@ -6,8 +6,13 @@ public class RunBakery {
 
 	public static void main(String[] args) {
 		
+		ArrayList<Cake> jobList = new ArrayList<>(); 
+		
 		int OvenA = 20;
 		int OvenB = 20;
+		
+//		Oven ovenA = new Oven();
+//		Oven ovenB = new Oven();
 
 		Cake c01 = new Cake(6);
 		Cake c02 = new Cake(4);
@@ -22,7 +27,8 @@ public class RunBakery {
 		Cake c11 = new Cake(3);
 		Cake c12 = new Cake(7);
 
-		ArrayList<Cake> jobList = new ArrayList<>();
+		
+		
 		jobList.add(c01);
 		jobList.add(c02);
 		jobList.add(c03);
@@ -41,65 +47,71 @@ public class RunBakery {
 		// cook all cakes
 
 		int count = 0;
-		while (OvenA + OvenB > 0 && count < jobList.size()) {
-			if (OvenA >= OvenB) {
-				if ((OvenA - jobList.get(count).cookingTime) < 0) {
-					jobList.get(count).cookingTime = jobList.get(count).cookingTime - OvenA;
-					OvenA = 0;
+		// version using Oven class instead of variables
+			while (OvenA + OvenB > 0 && count < jobList.size()) {
+				if (OvenA >= OvenB) {
+					if ((OvenA - jobList.get(count).cookingTime) < 0) {
+						jobList.get(count).cookingTime = jobList.get(count).cookingTime - OvenA;
+						OvenA = 0;
+					} else {
+						OvenA = OvenA - jobList.get(count).cookingTime;
+						jobList.get(count).cookingTime = 0;
+					}
 				} else {
-					OvenA = OvenA - jobList.get(count).cookingTime;
-					jobList.get(count).cookingTime = 0;
+					if ((OvenB - jobList.get(count).cookingTime) < 0) {
+						jobList.get(count).cookingTime = jobList.get(count).cookingTime - OvenB;
+						OvenB = 0;
+					} else {
+						OvenB = OvenB - jobList.get(count).cookingTime;
+						jobList.get(count).cookingTime = 0;
+					}
 				}
-			} else {
-				if ((OvenB - jobList.get(count).cookingTime) < 0) {
-					jobList.get(count).cookingTime = jobList.get(count).cookingTime - OvenB;
-					OvenB = 0;
-				} else {
-					OvenB = OvenB - jobList.get(count).cookingTime;
-					jobList.get(count).cookingTime = 0;
-				}
-			}
+				
 			count++;
 		}
 		
 		System.out.println("finished while loop");
 		
-		ArrayList<Cake> toDone = new ArrayList<>();
+		ArrayList<Cake> isDone = new ArrayList<>();
 		
 		System.out.print("jobList:  ");
 		System.out.println(jobList);
 		System.out.print("toDone:  ");
-		System.out.println(toDone);
+		System.out.println(isDone);
 
+		
 		//adds to toDone
 		for (int i = 0; i < jobList.size(); i++) {
 			if (jobList.get(i).cookingTime == 0) {
-				toDone.add(jobList.get(i));
+				isDone.add(jobList.get(i));
 			}
 		}
-				
-//		// removes done items from jobList 
-//		for (int i = 0; i < toDone.size(); i++) {
-//			jobList.remove(toDone.get(i));
-//		}
+		// save a file with isDone info in it
+			
 		
-		// removes done items from jobList alternate version using forEach
-		toDone.forEach (item -> {
-			jobList.remove(item);
-		});
+		// removes done items from jobList 
+		for (int i = 0; i < isDone.size(); i++) {
+			jobList.remove(isDone.get(i));
+		}
+		// now save as a file to start next day joblist
 		
 		System.out.print("jobList:  ");
 		System.out.println(jobList);
 		System.out.print("toDone:  ");
-		System.out.println(toDone);
+		System.out.println(isDone);
 		
 		// prep for the next 'day'
 		OvenA = 20;
 		OvenB = 20;
  
-	}
+		
+		
+		IncommingParking incommingParking = new IncommingParking();
+		
+		incommingParking.parking.add(new Cake(4));
+		incommingParking.saveToFile();
 
 		
- 
+	}
 	
 }

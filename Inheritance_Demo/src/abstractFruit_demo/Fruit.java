@@ -11,6 +11,8 @@ public abstract class Fruit {
 	
 	protected abstract String doConsume();
 	
+	protected abstract String getWhoAmI();
+	
 	
 	public static void checkMood() {
 		System.out.println("fruit is happy");
