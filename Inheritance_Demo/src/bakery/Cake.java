@@ -5,6 +5,7 @@ public class Cake {
 	public int cookingTime = 0;
 	
 	public static int orderNum = 0;
+	
 	public int thisOrderNum = 0;
 	
 	public Cake(int cTime) {
@@ -12,6 +13,7 @@ public class Cake {
 		thisOrderNum = orderNum;
 		cookingTime = cTime;
 	}
+	
 	
 	@Override
 	public String toString() {

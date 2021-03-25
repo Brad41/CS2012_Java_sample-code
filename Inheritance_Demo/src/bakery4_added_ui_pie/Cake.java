@@ -1,8 +1,7 @@
-package bakery2_with_job_joblist_classes;
+package bakery4_added_ui_pie;
 
 public class Cake extends Job{
 	
-
 	public Cake(int cTime) {
 		incrementOrderNum();
 		setThisOrderNum();
@@ -13,7 +12,5 @@ public class Cake extends Job{
 	public String getIngrediants() {
 		return "sugar";
 	}
-   
+	
 }
-
-

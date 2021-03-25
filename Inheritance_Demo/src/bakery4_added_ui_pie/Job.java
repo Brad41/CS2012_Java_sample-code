@@ -1,4 +1,4 @@
-package bakery2_with_job_joblist_classes;
+package bakery4_added_ui_pie;
 
 public abstract class Job {
 	
@@ -23,6 +23,11 @@ public abstract class Job {
 	public void setFinished(boolean finished) {
 		this.finished = finished;
 	}
+	
+	@Override
+	public String toString() {
+		return "num:" + String.valueOf(thisOrderNum) + "-time:" + getCookingTime();
+	}
 
 	public static void incrementOrderNum() {
 		orderNum++;
@@ -36,13 +41,7 @@ public abstract class Job {
 		return thisOrderNum;
 	}
 
-	protected void setThisOrderNum() {
+	public void setThisOrderNum() {
 		this.thisOrderNum = orderNum;
 	}
-	
-	@Override
-	public String toString() {
-		return "num:" + String.valueOf(thisOrderNum) + "-time:" + getCookingTime();
-	}
-	  
 }

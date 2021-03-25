@@ -18,12 +18,13 @@ public class RunBakery {
 		Cake c04 = new Cake(5);
 		Cake c05 = new Cake(8);
 		Cake c06 = new Cake(10);
-		Cake c07 = new Cake(13);
+		Cake c07 = new Cake(13);		
 		Cake c08 = new Cake(9);
 		Cake c09 = new Cake(7);
-		Cake c10 = new Cake(11);
+		Cake c10 = new Cake(11);		
 		Cake c11 = new Cake(3);
 		Cake c12 = new Cake(7);
+		
 
 		// add all the cake jobs to the jobList
 		jobList.add(c01);
@@ -75,7 +76,7 @@ public class RunBakery {
 		System.out.print("toDone:  ");
 		System.out.println(isDone);
 
-		// adds to toDone
+		// adds to isDone
 		for (int i = 0; i < jobList.size(); i++) {
 			if (jobList.get(i).cookingTime == 0) {
 				isDone.add(jobList.get(i));
