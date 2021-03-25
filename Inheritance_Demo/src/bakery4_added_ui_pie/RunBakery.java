@@ -8,7 +8,12 @@ public class RunBakery {
 
 		// ----- do input phase -----
 		UserInputInterface ui = new UserInputInterface();
+		ui.runCreateJobList();
+		
 		ui.runTestCreateJobList();
+		
+		
+		
 		JobList workOrder = ui.getWorkList();
 
 		System.out.println(workOrder); // debug output
@@ -16,8 +21,8 @@ public class RunBakery {
 		
 		
 		// ----- do processing phase ----- (cook all cakes)
-		WorkScheduler runJobs = new WorkScheduler();		
-		JobList jobList = runJobs.processJobs(workOrder);		
+		WorkScheduler runJobs = new WorkScheduler();	
+		JobList jobList = runJobs.processJobs(workOrder);	
 		
 		
 		 // debug output

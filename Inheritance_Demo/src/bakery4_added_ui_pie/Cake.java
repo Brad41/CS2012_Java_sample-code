@@ -1,16 +1,17 @@
 package bakery4_added_ui_pie;
 
-public class Cake extends Job{
+public class Cake extends Job {
 	
 	public Cake(int cTime) {
-		incrementOrderNum();
-		setThisOrderNum();
-		setCookingTime(cTime);
-		setFinished(false);
+		super(cTime);
 	}
 	
 	public String getIngrediants() {
 		return "sugar";
 	}
 	
+	@Override
+	public String toString() {
+		return "Cake\n" + getThisOrderNum() + "\n" + getCookingTime();
+	}
 }

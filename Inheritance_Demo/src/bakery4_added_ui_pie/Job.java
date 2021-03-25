@@ -4,9 +4,17 @@ public abstract class Job {
 	
 	private static int orderNum = 0;
 	private int thisOrderNum = 0;
-
 	private int cookingTime = 0;
 	private boolean finished = false;
+	
+	
+	public Job(int cTime) {
+		incrementOrderNum();
+		setThisOrderNumber();
+		setCookingTime(cTime);
+		setFinished(false);
+	}
+	
 	
 	public int getCookingTime() {
 		return cookingTime;
@@ -23,11 +31,6 @@ public abstract class Job {
 	public void setFinished(boolean finished) {
 		this.finished = finished;
 	}
-	
-	@Override
-	public String toString() {
-		return "num:" + String.valueOf(thisOrderNum) + "-time:" + getCookingTime();
-	}
 
 	public static void incrementOrderNum() {
 		orderNum++;
@@ -41,7 +44,15 @@ public abstract class Job {
 		return thisOrderNum;
 	}
 
-	public void setThisOrderNum() {
+	public void setThisOrderNumber() {
 		this.thisOrderNum = orderNum;
 	}
+	
+	public void setThisOrderNumber(int num) {
+		this.thisOrderNum = num;
+	}
+
+	@Override
+	public abstract String toString(); 
+	
 }
