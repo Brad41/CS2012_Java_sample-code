@@ -6,12 +6,20 @@ public class Cake extends Job {
 		super(cTime);
 	}
 	
+	public Cake(int cTime, boolean isTemp) {
+		super(cTime);
+	}
+	
 	public String getIngrediants() {
 		return "sugar";
 	}
 	
+	public String getJobType() {
+		return "Cake";
+	}
+	
 	@Override
 	public String toString() {
-		return "Cake\n" + getThisOrderNum() + "\n" + getCookingTime();
+		return getThisOrderNumber() + "\tCake\t" +  getCookingTime();
 	}
 }

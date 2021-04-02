@@ -25,6 +25,9 @@ public class JobList {
 		jobs.remove(aJob);
 	}
 	
+	public void clearList(){
+		jobs.clear();
+	}
 	public void saveToFile(String fileName) {
 		String pathString = fileName + ".txt";
 
@@ -33,7 +36,9 @@ public class JobList {
 			PrintWriter prtout = new PrintWriter(aFile);
 			
 			for(int i = 0; i < jobs.size(); i++) {
-				prtout.println(jobs.get(i));
+				prtout.println(jobs.get(i).getJobType());
+				prtout.println(jobs.get(i).getCookingTime());
+				prtout.println(jobs.get(i).getThisOrderNumber());
 			}
 
 			prtout.flush();
@@ -41,6 +46,17 @@ public class JobList {
 
 		} catch (IOException e) {
 			System.err.println(e);
+		}
+	}
+	
+	public void showJobList() {
+		if(getSize() > 0) {
+			for (int i = 0; i < getSize(); i++) {
+				System.out.println("\t" + getJob(i)); // uses the overloaded toString()
+			}
+			//System.out.println("-----------");
+		} else {
+			System.out.println("list is empty");
 		}
 	}
 	

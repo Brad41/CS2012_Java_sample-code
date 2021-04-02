@@ -10,12 +10,12 @@
 !/File-IO-Demo/src/
 /File-IO-Demo/src/*
 !/File-IO-Demo/src/packageSimple/
-!/File-IO-Demo/src/packageDemo/
 !/File-IO-Demo/src/packageMixed
 
 #Inheritance
 !/Inheritance_Demo
 /Inheritance_Demo/*
+!/Inheritance_Demo/*.txt
 !/Inheritance_Demo/src/
 /Inheritance_Demo/src/*
 !/Inheritance_Demo/src/abstractFruit_demo/
@@ -36,6 +36,9 @@
 package-info.java
 module-info.java
 
+
+# a bash function for doing quick gitHub updates
 # cupdate() {  git add . ; git commit -m "quick code update" ; git push origin main ; }
 
+# note to self because I always forget this one
 #  git rm -r --cached . 
