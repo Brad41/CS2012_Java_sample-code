@@ -21,11 +21,18 @@ public class HelloWorldButton extends Application {
 		Text tx = new Text("Look at this awesome text!.Hidden behind the button");
 		Button btn = new Button();
 		btn.setText("Say 'Hello World'");
+		
 		btn.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				System.out.println("Hello to the World!");
 			}
+			
+			// might have to use this version instead, and I don't yet know why
+//			@Override
+//			public void handle(Event event) {
+//				System.out.println("Hello to the World!");
+//			}
 		});
 
 		StackPane root = new StackPane();	
