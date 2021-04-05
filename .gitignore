@@ -11,6 +11,7 @@
 /File-IO-Demo/src/*
 !/File-IO-Demo/src/packageSimple/
 !/File-IO-Demo/src/packageMixed
+!/File-IO-Demo/src/packageDemo
 
 #Inheritance
 !/Inheritance_Demo
@@ -32,13 +33,27 @@
 #/VehicleRepair-MidTerm/*
 !/VehicleRepair-MidTerm/src/mainpackage/
 
-
 package-info.java
 module-info.java
+
+
+#JavaFX
+
+!/JavaFXdemo_1
+/JavaFXdemo_1/*
+!/JavaFXdemo_1/*.txt
+!/JavaFXdemo_1/src
+!/JavaFXdemo_1/src/*
+!/JavaFXdemo_1/src/**
+
+#!/JavaFXdemo_1/src/hellofx/*
 
 
 # a bash function for doing quick gitHub updates
 # cupdate() {  git add . ; git commit -m "quick code update" ; git push origin main ; }
 
-# note to self because I always forget this one
+# note to self because I always forget this one when resetting the .gitignore
 #  git rm -r --cached . 
+
+#  git ls-files --others --exclude-standard
+
