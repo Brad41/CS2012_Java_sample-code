@@ -42,6 +42,7 @@ module-info.java
 !/JavaFXdemo_1
 /JavaFXdemo_1/*
 !/JavaFXdemo_1/*.txt
+!/JavaFXdemo_1/*.MD
 !/JavaFXdemo_1/src
 !/JavaFXdemo_1/src/*
 !/JavaFXdemo_1/src/**
