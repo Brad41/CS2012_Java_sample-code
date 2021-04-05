@@ -46,7 +46,7 @@ module-info.java
 !/JavaFXdemo_1/src/*
 !/JavaFXdemo_1/src/**
 
-#!/JavaFXdemo_1/src/hellofx/*
+
 
 
 # a bash function for doing quick gitHub updates
