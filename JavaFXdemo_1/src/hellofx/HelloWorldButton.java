@@ -17,18 +17,20 @@ public class HelloWorldButton extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
+		System.out.println("top of start class");
+
 		primaryStage.setTitle("Hello World! window title");
-		
+
 		Text tx = new Text("Look at this awesome text!.Hidden behind the button");
 		Button btn = new Button();
 		btn.setText("Say 'Hello World'");
-		
+
 		btn.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				System.out.println("Hello to the World!");
 			}
-			
+
 			// might have to use this version instead, and I don't yet know why
 //			@Override
 //			public void handle(Event event) {
@@ -36,13 +38,15 @@ public class HelloWorldButton extends Application {
 //			}
 		});
 
-		StackPane root = new StackPane();	
+		StackPane root = new StackPane();
 		root.getChildren().add(tx);
 		root.getChildren().add(btn);
 
 		Scene sc = new Scene(root, 400, 250);
 		primaryStage.setScene(sc);
 		primaryStage.show();
+
+		System.out.println("bottom of start class");
 	}
 
 }

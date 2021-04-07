@@ -47,6 +47,13 @@ module-info.java
 !/JavaFXdemo_1/src/*
 !/JavaFXdemo_1/src/**
 
+!/TextBookCode
+/TextBookCode/*
+!/TextBookCode/*.txt
+!/TextBookCode/*.MD
+!/TextBookCode/src
+!/TextBookCode/src/*
+!/TextBookCode/src/**
 
 
 
