@@ -20,6 +20,6 @@ public class Pie extends Job {
 
 	@Override
 	public String toString() {
-		return getThisOrderNumber() + "\tCake\t" + getCookingTime();
+		return getThisOrderNumber() + "\tPie\t" + getCookingTime();
 	}
 }

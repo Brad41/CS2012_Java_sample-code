@@ -1,8 +1,5 @@
 JavaFX project setup for Eclipse
 
-(full set of working example code on GitHub:  https://github.com/rkjc/CS2012_Java_sample-code )
-
-
 
 
 Download the JavaFX library - Best choice this semester would probably be JavaFX-11.0.10  LTS (Long Term Support). The higher version numbers will probably also work  ... but they won't be supported by the time you come back to these projects in a year or more.

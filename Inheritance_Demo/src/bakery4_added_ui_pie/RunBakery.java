@@ -22,15 +22,10 @@ public class RunBakery {
 
 			// ----- do processing phase ----- (cook all cakes)
 			jobrunner.processJobs(workOrder);
+//
 
-			System.out.println("print finished"); // debug
-			jobrunner.printFinishedList();
-			System.out.println("print unfinished"); // debug
-			jobrunner.printUnFinishedList();
-			// ----- do output phase -----
 
 			ui.printEndOfDayReport();
-
 		}
 	}
 }

@@ -18,6 +18,7 @@ public class HelloWorldButton extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Hello World! window title");
+		
 		Text tx = new Text("Look at this awesome text!.Hidden behind the button");
 		Button btn = new Button();
 		btn.setText("Say 'Hello World'");
@@ -37,7 +38,8 @@ public class HelloWorldButton extends Application {
 
 		StackPane root = new StackPane();	
 		root.getChildren().add(tx);
-		root.getChildren().add(btn);	
+		root.getChildren().add(btn);
+
 		Scene sc = new Scene(root, 400, 250);
 		primaryStage.setScene(sc);
 		primaryStage.show();
