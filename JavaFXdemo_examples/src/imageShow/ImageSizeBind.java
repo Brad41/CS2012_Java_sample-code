@@ -35,9 +35,7 @@ public class ImageSizeBind extends Application {
 		
 		ImageView imageView1 = new ImageView(image1);
 		imageView1.setFitHeight(600);
-		imageView1.setPreserveRatio(true);
-		
-		//imageView1.fitHeightProperty().bind(hPane.heightProperty());
+	
 		
 		hPane.getChildren().add(imageView1);
 

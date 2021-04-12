@@ -99,7 +99,7 @@ public class <your class name here> extends Application {
 				System.out.println("Hello to the World!");
 			}
             
-            // might have to use this version instead, and I don't yet know why
+            // you might have to use this version instead, depending on whether you are using JavaFX 11 
 //			@Override
 //			public void handle(Event event) {
 //				System.out.println("Hello to the World!");
