@@ -13,34 +13,23 @@ public class FontDemo extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {    
     // Create a pane to hold the circle 
-
-	  Pane pane = new StackPane();
-	  
+    Pane pane = new StackPane();
+    
     // Create a circle and set its properties
     Circle circle = new Circle();
-    circle.radiusProperty().bind(pane.heightProperty().divide(4)) ;
-//    pane.widthProperty().divide(3));
-//    circle.centerYProperty().bind(pane.heightProperty().divide(3));
+    circle.setRadius(50);
     circle.setStroke(Color.BLACK); 
-    circle.setFill(new Color(1.0, 0.0, 0.0, 0.9));
-    
+    circle.setFill(new Color(0.5, 0.5, 0.5, 0.1));
+    pane.getChildren().add(circle); // Add circle to the pane
 
     // Create a label and set its properties
     Label label = new Label("JavaFX");
-    label.setFont(Font.font("Arial", 
-      FontWeight.BOLD, FontPosture.ITALIC, 50));
-    //Setting the color of the text
-    label.setTextFill(Color.BLUE);
-    //Setting the width
-    
-    
-    pane.getChildren().add(circle); // Add circle to the pane
+    label.setFont(Font.font("Times New Roman", 
+      FontWeight.BOLD, FontPosture.ITALIC, 20));
     pane.getChildren().add(label);
 
-
-
     // Create a scene and place it in the stage
-    Scene scene = new Scene(pane, 250, 250);
+    Scene scene = new Scene(pane);
     primaryStage.setTitle("FontDemo"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage

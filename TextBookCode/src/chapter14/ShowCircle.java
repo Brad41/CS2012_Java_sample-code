@@ -8,26 +8,24 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class ShowCircle extends Application {
-	
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
-	  
     // Create a circle and set its properties
-    Circle mycircle = new Circle();
-    mycircle.setCenterX(100);
-    mycircle.setCenterY(100);
-    mycircle.setRadius(50);
-    mycircle.setStroke(Color.BLACK);
-    mycircle.setFill( Color.color(0.7, 0.25, 0.8) );
+    Circle circle = new Circle();
+    circle.setCenterX(100);
+    circle.setCenterY(100);
+    circle.setRadius(50);
+    circle.setStroke(Color.BLACK);
+    circle.setFill(null);
     
     // Create a pane to hold the circle 
-    Pane blobopane = new Pane();
-    blobopane.getChildren().add(mycircle);
+    Pane pane = new Pane();
+    pane.getChildren().add(circle);
     
     // Create a scene and place it in the stage
-
+    Scene scene = new Scene(pane, 200, 200);
     primaryStage.setTitle("ShowCircle"); // Set the stage title
-    primaryStage.setScene(new Scene(blobopane, 200, 200)); // Place the scene in the stage
+    primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
   }
   

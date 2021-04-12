@@ -13,16 +13,13 @@ public class ShowCircleCentered extends Application {
     // Create a pane to hold the circle 
     Pane pane = new Pane();
     
-    
     // Create a circle and set its properties
     Circle circle = new Circle();
-    circle.centerXProperty().bind(pane.widthProperty().divide(3));
-    circle.centerYProperty().bind(pane.heightProperty().divide(3));
-    circle.setRadius(-15);
-    circle.radiusProperty().bind(pane.widthProperty().divide(4));
-    circle.setStroke(Color.BLUE); 
-    circle.setFill(Color.PURPLE);
-    
+    circle.centerXProperty().bind(pane.widthProperty().divide(2));
+    circle.centerYProperty().bind(pane.heightProperty().divide(2));
+    circle.setRadius(50);
+    circle.setStroke(Color.BLACK); 
+    circle.setFill(Color.WHITE);
     pane.getChildren().add(circle); // Add circle to the pane
 
     // Create a scene and place it in the stage

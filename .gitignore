@@ -39,13 +39,18 @@ module-info.java
 
 #JavaFX
 
-!/JavaFXdemo_1
-/JavaFXdemo_1/*
-!/JavaFXdemo_1/*.txt
-!/JavaFXdemo_1/*.MD
-!/JavaFXdemo_1/src
-!/JavaFXdemo_1/src/*
-!/JavaFXdemo_1/src/**
+!/JavaFXdemo_examples
+/JavaFXdemo_examples/*
+!/JavaFXdemo_examples/*.txt
+!/JavaFXdemo_examples/*.jpg
+!/JavaFXdemo_examples/*.MD
+!/JavaFXdemo_examples/images
+!/JavaFXdemo_examples/src
+!/JavaFXdemo_examples/src/*
+!/JavaFXdemo_examples/src/**
+/JavaFXdemo_examples/src/solutions
+
+
 
 !/TextBookCode
 /TextBookCode/*

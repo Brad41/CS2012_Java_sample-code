@@ -12,27 +12,22 @@ public class ShowBorderPane extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     // Create a border pane 
-    BorderPane bPane = new BorderPane();
+    BorderPane pane = new BorderPane();
 
     // Place nodes in the pane
-    bPane.setTop(  new CustomPane("Top")  ); 
-    bPane.setRight(new CustomPane("Right"));
-    bPane.setBottom(new CustomPane("Bottom"));
-    bPane.setLeft(new CustomPane("Left"));
-    bPane.setCenter(new CustomPane("Center")); 
+    pane.setTop(new CustomPane("Top")); 
+    pane.setRight(new CustomPane("Right"));
+    pane.setBottom(new CustomPane("Bottom"));
+    pane.setLeft(new CustomPane("Left"));
+    pane.setCenter(new CustomPane("Center")); 
     
     // Create a scene and place it in the stage
-    Scene scene = new Scene(bPane);
+    Scene scene = new Scene(pane);
     primaryStage.setTitle("ShowBorderPane"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
   }
-  
-  public static void main(String[] args) {
-	    launch(args);
-  }
 } 
-
 
 // Define a custom pane to hold a label in the center of the pane
 class CustomPane extends StackPane {
@@ -42,6 +37,3 @@ class CustomPane extends StackPane {
     setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
   }
 }
-
-
-
