@@ -20,14 +20,14 @@ public class ImageExamples_1 extends Application {
 		pane.setPadding(new Insets(5, 5, 5, 5));
 
 
-		System.out.print("This project level image storage-> "); 
+//		System.out.print("This project level image storage-> "); 
 		File sampleImageFile1 = new File("crazyCat.jpg");
 		
-		System.out.print("checking if file exists-> "); 
-		System.out.println(sampleImageFile1.exists());
+//		System.out.print("checking if file exists-> "); 
+//		System.out.println(sampleImageFile1.exists());
 		
 		String sampleImageFile1_locationString = sampleImageFile1.toURI().toURL().toExternalForm(); // the Image constructor needs an absolute path.
-		System.out.print("getting the full absolute path location-> "); 
+//		System.out.print("getting the full absolute path location-> "); 
 		System.out.println(sampleImageFile1_locationString);
 
 		Image catImage = new Image(sampleImageFile1_locationString, false); //false => does not load in background, loads immediately
