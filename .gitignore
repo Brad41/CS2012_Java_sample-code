@@ -56,7 +56,7 @@ StackOverflower
 StringBuilderScratchPad
 String_demo
 #TextBookCode
-#VehicleRepair-MidTerm
+VehicleRepair-MidTerm
 VisibilityAndAccess_demo
 WrapperClasses
 ZZZ_bottomFiller_ZZZ
@@ -75,3 +75,5 @@ bin/
 #  git rm -r --cached . 
 
 #  git ls-files --others --exclude-standard
+
+# list by only name$  ls -1a
