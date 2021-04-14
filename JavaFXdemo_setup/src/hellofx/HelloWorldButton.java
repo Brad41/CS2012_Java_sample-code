@@ -31,11 +31,7 @@ public class HelloWorldButton extends Application {
 				System.out.println("Hello to the World!");
 			}
 
-			// might have to use this version instead if you are running an older version of JavaFX
-//			@Override
-//			public void handle(Event event) {
-//				System.out.println("Hello to the World!");
-//			}
+			// I removed the alt code, it was causing too much confusion (for me)
 		});
 
 		StackPane root = new StackPane();

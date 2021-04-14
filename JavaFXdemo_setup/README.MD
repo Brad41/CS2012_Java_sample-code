@@ -99,11 +99,6 @@ public class <your class name here> extends Application {
 				System.out.println("Hello to the World!");
 			}
             
-            // you might have to use this version instead, depending on whether you are using JavaFX 11 
-//			@Override
-//			public void handle(Event event) {
-//				System.out.println("Hello to the World!");
-//			}
 		});
 
 		StackPane root = new StackPane();	
