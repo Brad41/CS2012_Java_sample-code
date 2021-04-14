@@ -94,9 +94,10 @@ Libraries tab -> Modulepath -> Add External JARs (opens file dialog window)
         javafx.media
 ```
 
+
 Edit the file  module-info.java  located in the project folder.
 
-```java:
+```java
     module <project name> {
         requires javafx.base;
         requires javafx.graphics;
@@ -108,9 +109,10 @@ Edit the file  module-info.java  located in the project folder.
 
 
 
-Past this example code into your Class file and see if it will run and make a GUI window with a button in it.
 
-```java:
+Paste this example code into your Class file and see if it will run and make a GUI window with a button in it.
+
+```java
 
 	package yourPackageNameGoesHere;
 	
