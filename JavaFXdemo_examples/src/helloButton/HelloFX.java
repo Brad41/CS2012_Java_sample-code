@@ -11,19 +11,22 @@ import javafx.stage.Stage;
 
 public class HelloFX extends Application {
 
-	public static void main(String[] args) {
-		Application.launch(args);
-	}
+
 
 	@Override
 	public void start(Stage primaryStage) {
+		
 		primaryStage.setTitle("Hello World! window title");
+		
 		Text tx = new Text("Look at this awesome text!.Hidden behind the button");
+		
 		Button btn = new Button();
 		btn.setText("Say 'Hello World'");
+		
 		btn.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
+				tx.setText("------------------------------------------------");
 				System.out.println("Hello to the World!");
 			}
 		});
@@ -36,4 +39,10 @@ public class HelloFX extends Application {
 		primaryStage.show();
 	}
 
+	// ------------------------------------------------
+	public static void main(String[] args) {
+		System.out.println("Enetered the main() method");
+		Application.launch(args);
+		System.out.println("Leaving the main() method");
+	}
 }
