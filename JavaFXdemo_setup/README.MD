@@ -83,7 +83,7 @@ R-click on the Project name -> Configure Build Path
 Libraries tab -> Modulepath -> Add External JARs (opens file dialog window)
     navigate to location of unpacked javaFX package -> lib -> select a library to import
 
-~~~
+```
     Main Libraries we will need:
         javafx.base
         javafx.controls
@@ -92,11 +92,11 @@ Libraries tab -> Modulepath -> Add External JARs (opens file dialog window)
     Additional Libraries for later chapters:
         javafx.fxml
         javafx.media
-~~~   
+```
 
 Edit the file  module-info.java  located in the project folder.
 
-~~~java:
+```java:
     module <project name> {
         requires javafx.base;
         requires javafx.graphics;
@@ -104,15 +104,15 @@ Edit the file  module-info.java  located in the project folder.
         
         exports <package name>; //without the angle brackets
     }
-~~~
+```
 
 
 
 Past this example code into your Class file and see if it will run and make a GUI window with a button in it.
 
-~~~java:
+```java:
 
-	package <your package name here>
+	package yourPackageNameGoesHere;
 	
 	import javafx.application.Application;
 	import javafx.event.ActionEvent;
@@ -154,7 +154,7 @@ Past this example code into your Class file and see if it will run and make a GU
 	
 	}
 
-~~~
+```
 
 
 
