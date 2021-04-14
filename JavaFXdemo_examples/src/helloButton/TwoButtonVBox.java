@@ -2,6 +2,7 @@ package helloButton;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -18,19 +19,21 @@ public class TwoButtonVBox extends Application {
 		primaryStage.setTitle("Two Button VBox");
 		Text txt1 = new Text("Text at the top of the VBox stack");
 		Text txt2 = new Text("Text at the bottom of the VBox stack");
-		Button btn1 = new Button();
-		Button btn2 = new Button();
 		
+		Button btn1 = new Button();
 		btn1.setText("This is Button ONE");
+		
+		Button btn2 = new Button();
+		btn2.setText("This is Button TWO");
+
+		
 		btn1.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				System.out.println("Button One pushed");
 			}
 		});
-		
-		
-		btn2.setText("This is Button TWO");
+				
 		btn2.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {

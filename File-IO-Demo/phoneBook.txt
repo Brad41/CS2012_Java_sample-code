@@ -1,0 +1,10 @@
+Mason;Tioseco;3155267738;mtiose@hotmail.com;
+Louis;Moore;3100536310;lmoore@att.net;
+Moises;Turner;7796473322;mturne@aol.com;
+Diem;Flores;6610315571;dflore@calstatela.edu;
+Howard;Tyler;3526684668;htyler@hotmail.com;
+Tresah;Jeong;2316423064;tjeong@hotmail.com;
+Cielo;Turing;7867818544;cturin@spectrum.net;
+Leshawna;Roberts;5594865411;lrober@calstatela.edu;
+Adam;Lee;3218384386;alee@spectrum.net;
+Isaac;Ward;5177337683;iward@spectrum.net;

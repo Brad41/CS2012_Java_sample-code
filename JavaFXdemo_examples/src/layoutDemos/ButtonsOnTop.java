@@ -23,16 +23,18 @@ public class ButtonsOnTop extends Application {
 	// --------------------------------------------------------------------		
 		VBox vbox1 = new VBox(10); // the attribute sets the space between nodes
 		vbox1.setPadding(new Insets(15, 15, 15, 15)); // sets space around the edges
+		vbox1.setAlignment(Pos.TOP_CENTER);
 		
 		HBox hbox1 = new HBox(10); // the attribute sets the space between nodes
 		hbox1.setPadding(new Insets(15, 15, 15, 15)); // sets space around the edges
 		hbox1.setStyle("-fx-background-color: CYAN");
+		hbox1.setAlignment(Pos.CENTER);  //?? this does work
 		
-		GridPane gridBox = new GridPane();
-		gridBox.setAlignment(Pos.CENTER);
-		gridBox.setHgap(20);
-		gridBox.setPadding(new Insets(10, 10, 15, 15));
-		gridBox.setStyle("-fx-background-color: CYAN");
+//		GridPane gridBox = new GridPane();
+//		gridBox.setAlignment(Pos.CENTER);
+//		gridBox.setHgap(20);
+//		gridBox.setPadding(new Insets(10, 10, 15, 15));
+//		gridBox.setStyle("-fx-background-color: CYAN");
 		
 	// --------------------------------------------------------------------
 		Text txt1 = new Text("Text at the top of the VBox stack");
@@ -62,14 +64,14 @@ public class ButtonsOnTop extends Application {
 		});
 	// --------------------------------------------------------------------		
 
-		gridBox.add(btn1, 0, 0);
-		gridBox.add(btn2, 1, 0);
+//		gridBox.add(btn1, 0, 0);
+//		gridBox.add(btn2, 1, 0);
 		
-		//hbox1.getChildren().add(btn1);
-		//hbox1.getChildren().add(btn2);
+		hbox1.getChildren().add(btn1);
+		hbox1.getChildren().add(btn2);
 		
-		vbox1.getChildren().add(gridBox);
-		//vbox1.getChildren().add(hbox1);
+//		vbox1.getChildren().add(gridBox);
+		vbox1.getChildren().add(hbox1);
 		vbox1.getChildren().add(txt1);
 		vbox1.getChildren().add(txt2);
 

@@ -8,4 +8,5 @@ module javafxdemo_examples {
 	exports imageShow;
 	exports helloButton;
 	exports layoutDemos;
+	exports eventHandling;
 }
