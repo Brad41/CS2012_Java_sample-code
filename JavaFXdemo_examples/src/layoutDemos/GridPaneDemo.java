@@ -17,11 +17,11 @@ public class GridPaneDemo extends Application {
 	@Override // Override the start method in the Application class
 	public void start(Stage primaryStage) {
 		// Create a pane and set its properties
-		GridPane pane = new GridPane();
-		pane.setAlignment(Pos.CENTER);
-		pane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
-		pane.setHgap(5.5);
-		pane.setVgap(5.5);
+		GridPane gPane = new GridPane();
+		gPane.setAlignment(Pos.CENTER);
+		gPane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
+		gPane.setHgap(5.5);
+		gPane.setVgap(5.5);
 
 		Rectangle r01 = new Rectangle(0, 0, 50, 50); // top left at location 0,0 - size 50 width x 50 50 height
 		Rectangle r02 = new Rectangle(0, 0, 50, 50);
@@ -48,20 +48,20 @@ public class GridPaneDemo extends Application {
 		
 
 		// Place nodes in the pane
-		pane.add(r01, 0, 0); // put Rectangle r01 at grid location column 0, row 0
-		pane.add(r02, 0, 1); // put Rectangle r02 at grid location column 0, row 1
-		pane.add(r03, 0, 2);
-		pane.add(r04, 1, 0);
-		pane.add(r05, 1, 1);
-		pane.add(r06, 1, 2);
-		pane.add(r07, 2, 0);
-		pane.add(r08, 2, 1);
-		pane.add(r09, 2, 2);
+		gPane.add(r01, 0, 0); // put Rectangle r01 at grid location column 0, row 0
+		gPane.add(r02, 0, 1); // put Rectangle r02 at grid location column 0, row 1
+		gPane.add(r03, 0, 2);
+		gPane.add(r04, 1, 0);
+		gPane.add(r05, 1, 1);
+		gPane.add(r06, 1, 2);
+		gPane.add(r07, 2, 0);
+		gPane.add(r08, 2, 1);
+		gPane.add(r09, 2, 2);
 
 		// GridPane.setHalignment(btAdd, HPos.RIGHT);
 
 		// Create a scene and place it in the stage
-		Scene scene = new Scene(pane);
+		Scene scene = new Scene(gPane);
 		primaryStage.setTitle("ShowGridPane"); // Set the stage title
 		primaryStage.setScene(scene); // Place the scene in the stage
 		primaryStage.show(); // Display the stage
